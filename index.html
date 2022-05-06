@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+        <p>Please select your password criteria from the boxes below</p>
+      </header>
+      <div class="card">
+        <div class="checkboxes">
+          <span><input type="checkbox" name="lowercase" id="lowercase">&nbsp;&nbsp;Lowercase</span>
+          <span><input type="checkbox" name="uppercase" id="uppercase">&nbsp;&nbsp;Uppercase</span>
+          <span><input type="checkbox" name="numbers" id="numbers">&nbsp;&nbsp;Numbers</span>
+          <span><input type="checkbox" name="special" id="special">&nbsp;&nbsp;Special Characters</span>
+        </div>
+        <p class="sliderDesc">Select the length of your password.</p>
+          <input class="slider" type="range" min="8" max="128" value="16" name="numChar" id="numChar">
+        <P id="numCharValue">16</P>
+        
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+          <div id="errMsg">
+            <p>You must select at least one criterion!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

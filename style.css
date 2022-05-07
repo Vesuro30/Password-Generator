@@ -35,6 +35,9 @@ input{
  
 }
 
+/* Added checkboxes and the slider as well as the display of the value of the slider
+   checkboxes is set to flex to allow the elements to change to column display on narrow displays */
+
 .checkboxes{
   display: flex;
   justify-content: space-between;
@@ -173,7 +176,7 @@ button[disabled] {
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
-
+/* functionality to change to column display for narrow displays */
   .checkboxes{
     flex-direction: column;
   }
@@ -188,7 +191,7 @@ button[disabled] {
     font-size: 0.8rem;
     flex-direction: column;
   }
-
+/* functionality to change to column display for narrow displays */
   .checkboxes{
     flex-direction: column;
   }

@@ -131,15 +131,11 @@ function generateRandNum(min, max) {
       else if(charType == 3 && useSpec)
         {pw += special[generateRandNum(0, 31)];}
       };
-      
-      
-      
-      //  console.log(pw.length)
     };
   };
-  return pw;  
+  return pw; 
+   
 };
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

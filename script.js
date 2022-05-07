@@ -15,7 +15,7 @@ var numCharValue = document.getElementById("numCharValue");
 //add event listener to slider and display value
 numChar.addEventListener("input", function(){
   numCharValue.innerHTML = numChar.value;
-});
+})
 
 // Assignment Code - this selects the generate button, or more specifically which element has the generate ID
 var generateBtn = document.querySelector("#generate");
@@ -25,7 +25,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-};
+}
 
 
 // The function below generatePassword is used to verify that we have all types selected by the user
@@ -45,7 +45,6 @@ var useUpper = document.getElementById("uppercase").checked;
 var useNum = document.getElementById("numbers").checked;
 var useSpec = document.getElementById("special").checked;
 var pw = "";
-var i;
 var haveLower = false, haveUpper = false, haveNum = false, haveSpec = false;
 
 function generateRandNum(min, max) {
@@ -75,7 +74,7 @@ function generateRandNum(min, max) {
       if(useSpec && !haveSpec){
         pw += special[generateRandNum(0, 31)];
         haveSpec = true;
-      };
+      }
 
 
 
@@ -130,12 +129,12 @@ function generateRandNum(min, max) {
         {pw += numbers[generateRandNum(0, 9)];}
       else if(charType == 3 && useSpec)
         {pw += special[generateRandNum(0, 31)];}
-      };
-    };
-  };
+      }
+    }
+  }
   return pw; 
    
-};
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
